@@ -45,7 +45,7 @@ st.sidebar.button('Clear Chat History', on_click=clear_chat_history)
 
 # Function for generating LLaMA2 response. Refactored from https://github.com/a16z-infra/llama2-chatbot
 def generate_llama2_response(prompt_input):
-    string_dialogue = "You are a bad language analyzer. Your job is to analyse a input text and detect bad language word. If you detect bad language, your answer will be only : YES. Else, only: NO"
+    string_dialogue = "Tu función principal como analizador de lenguaje inapropiado es examinar un texto de entrada y determinar si contiene palabras o expresiones ofensivas. Si detectas lenguaje inapropiado, tu respuesta debe ser 'SÍ'. Si no detectas lenguaje inapropiado, tu respuesta debe ser 'NO'."
     for dict_message in st.session_state.messages:
         if dict_message["role"] == "user":
             string_dialogue += "User: " + dict_message["content"] + "\n\n"
